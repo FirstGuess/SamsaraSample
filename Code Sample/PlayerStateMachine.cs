@@ -13,17 +13,6 @@ using UnityEngine.Events;
 using MagicaCloth;
 using QFSW.QC;
 
-// BanannaRepublic
-// user
-// wTTg3nspLoYM
-// qGWQtm1FcHUB
-
-public enum ColliderType {
-    Capsule,
-    Box,
-    Sphere
-}
-
 public class PlayerStateMachine : MonoBehaviour, IDiveControllable {
 
     [SerializeField] GameObject grappleGun;
@@ -65,16 +54,7 @@ public class PlayerStateMachine : MonoBehaviour, IDiveControllable {
 
     public Camera _cam;
     GameObject _groundObject;
-
-    ///// Fields /////
-
     public Transform avatarLookTransform;
-
-
-
-
-    
-    
     private CapsuleCollider _playerCollider;
     private SphereCollider _sphereCollider;
     private Vector3 _frontSide;
@@ -88,8 +68,6 @@ public class PlayerStateMachine : MonoBehaviour, IDiveControllable {
 
     public MoveData _moveData;
     public MoveConfig _moveConfig;
-
-    ///// Properties /////
 
     public PlayerBaseState currentState { get {return _currentState; } set { _currentState = value; } }
     public MoveConfig moveConfig { get { return _moveConfig; } }
